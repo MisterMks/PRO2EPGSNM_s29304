@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour
             rb.velocity = new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime, rb.velocity.y,0);
         }
 
+
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * upForce);
