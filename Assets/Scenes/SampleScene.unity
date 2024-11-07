@@ -1605,7 +1605,7 @@ GameObject:
   - component: {fileID: 520623971}
   - component: {fileID: 520623970}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: InvWall4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3021,6 +3021,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 469943721}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1526450512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1526450514}
+  - component: {fileID: 1526450513}
+  m_Layer: 0
+  m_Name: MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1526450513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526450512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d3214e701f3074a84b15eb92064f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPrefab: {fileID: 115897938877833456, guid: 477cf6e63504ae749900d199f33f69c3,
+    type: 3}
+  fromX: -20
+  toX: 20
+  fromZ: -5
+  toZ: 20
+  collectiblesCount: 10
+--- !u!4 &1526450514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526450512}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.707171, y: -9.700406, z: 10.511271}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1599609646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3730,7 +3781,7 @@ GameObject:
   - component: {fileID: 1768682763}
   - component: {fileID: 1768682762}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: InvWall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4415,7 +4466,7 @@ GameObject:
   - component: {fileID: 2036504252}
   - component: {fileID: 2036504251}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: InvWall3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4917,7 +4968,7 @@ GameObject:
   - component: {fileID: 2086060412}
   - component: {fileID: 2086060411}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: InvWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5220,6 +5271,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1526450514}
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
