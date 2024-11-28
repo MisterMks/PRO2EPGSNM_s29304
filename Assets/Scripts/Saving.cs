@@ -2,32 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Saving : MonoBehaviour
+public class MenuController : MonoBehaviour
 {
-    
-    public void NewGame()
+    public GameObject menuPanel;
+    public Movement playerMovement;
+
+
+
+
+    public void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            gameObject.SetActive(!gameObject.activeSelf);
+            menuPanel.SetActive(!menuPanel.activeSelf);
+
+            //check if save exists DataSerializer.AnySave()
+            //If exists Activate continue button
+            //Else deactivate continue button
         }
     }
-    public void SaveGame()
+
+
+    public void NewGame()
+    {
+        new SaveData();
+    }
+
+    public void Save()
+    {
+        //Fill save data
+        playerMovement.Save();
+        DataSerializer.Save();
+    }
+
+    public void Continue()
     {
 
     }
-    public void LoadGame()
-    {
 
-    }
     public void Exit()
     {
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
+
+
+

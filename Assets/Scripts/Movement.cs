@@ -81,4 +81,43 @@ public class Movement : MonoBehaviour
         isGrounded = true;
         anim.SetBool("isGrounded", true);
     }
+
+    public void Save()
+    {
+        SaveData.instance.playerX = transform.position.x;
+        SaveData.instance.playerY = transform.position.y;
+        SaveData.instance.playerZ = transform.position.z;
+    }
+
+    public void Load()
+    {
+        transform.position = new Vector3(SaveData.instance.playerX,
+            SaveData.instance.playerY,
+            SaveData.instance.playerZ);
+    }
 }
+public class Collectible : MonoBehaviour
+    {
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            other.GetComponent<CollectibleCounter>().IncreaseCounter();
+            gameObject.SetActive(false);
+        }
+    }
+}
+
+public class CollectibleCounter : MonoBehaviour
+{
+    public int counter;
+
+    public void IncreaseCounter()
+    {
+        counter++;
+    }
+
+
+}
+
+
