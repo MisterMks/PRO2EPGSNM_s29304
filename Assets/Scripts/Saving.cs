@@ -37,6 +37,11 @@ public class MenuController : MonoBehaviour
 
     public void Continue()
     {
+        if (DataSerializer.AnySaves())
+        {
+            DataSerializer.Load();
+            playerMovement.Load();
+        }
 
     }
 
@@ -44,7 +49,5 @@ public class MenuController : MonoBehaviour
     {
 
     }
+
 }
-
-
-
